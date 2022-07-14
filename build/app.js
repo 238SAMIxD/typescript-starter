@@ -1,5 +1,15 @@
 "use strict";
 /* eslint-disable prettier/prettier */
+class Invoice {
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
+    }
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`;
+    }
+}
 const anchor = document.querySelector('a');
 console.log(anchor === null || anchor === void 0 ? void 0 : anchor.href);
 const form = document.querySelector('form.new-item-form');
@@ -13,4 +23,6 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
+const inv = new Invoice('Samuel', 'laundry', 20);
+console.error(inv.format());
 //# sourceMappingURL=app.js.map

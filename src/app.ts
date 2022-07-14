@@ -1,4 +1,12 @@
 /* eslint-disable prettier/prettier */
+class Invoice {
+    constructor(private client: string, private details: string, private amount: number) {}
+
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`;
+    }
+}
+
 const anchor = document.querySelector('a');
 console.log(anchor?.href);
 
@@ -15,3 +23,6 @@ form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
     console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
+
+const inv = new Invoice('Samuel', 'laundry', 20);
+console.error(inv.format());
