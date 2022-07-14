@@ -28,3 +28,29 @@ const Sami = {
     }
 };
 console.log(Sami);
+
+let str: string;
+str = 'haha';
+str = 'hehe';
+console.log(str);
+
+const lol: (string|number)[] = [];
+lol.push(2, 'xd');
+console.log(lol);
+
+const omg: Object = {
+    lol,
+    str
+};
+console.log(omg);
+
+const cool: {
+    one: string,
+    two: number,
+    three: boolean
+} = {
+    one: 'hej',
+    two: 2,
+    three: true
+};
+console.log(cool);
