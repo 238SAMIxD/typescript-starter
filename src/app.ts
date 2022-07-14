@@ -4,14 +4,6 @@ import Payment from './Modules/Payment.js';
 import Formatter from './Modules/Formatter.js';
 import ListTemplate from './Modules/ListTemplate.js';
 
-interface Person {
-    name: string;
-    age: number;
-
-    speak(what: string): void;
-    spends(howMuch: number): number;
-}
-
 const form = document.querySelector('form.new-item-form') as HTMLFormElement;
 const type = document.querySelector('#type') as HTMLInputElement;
 const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
