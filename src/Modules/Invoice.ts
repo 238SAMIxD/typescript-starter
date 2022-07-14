@@ -1,5 +1,7 @@
 /* eslint-disable prettier/prettier */
-export default class Invoice {
+import Formatter from './Formatter.js';
+
+export default class Invoice implements Formatter {
     constructor(private client: string, private details: string, private amount: number) {}
 
     format() {

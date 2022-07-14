@@ -1,9 +1,9 @@
 import Formatter from './Formatter.js';
-export default class Invoice implements Formatter {
-    private client;
+export default class Payment implements Formatter {
+    private recipient;
     private details;
     private amount;
-    constructor(client: string, details: string, amount: number);
+    constructor(recipient: string, details: string, amount: number);
     format(): string;
     getClient(): string;
     getDetails(): string;

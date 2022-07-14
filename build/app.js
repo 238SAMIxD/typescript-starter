@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import Invoice from './Modules/Invoice.js';
+import Payment from './Modules/Payment.js';
 const me = {
     name: 'Samuel',
     age: 21,
@@ -22,7 +23,14 @@ const amount = document.querySelector('#amount');
 console.log(type, tofrom, details, amount);
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+    let doc;
+    if (type.value === 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc.format());
 });
 const inv = new Invoice('Samuel', 'laundry', 20);
 console.error(inv.format());

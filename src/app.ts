@@ -1,5 +1,7 @@
 /* eslint-disable prettier/prettier */
 import Invoice from './Modules/Invoice.js';
+import Payment from './Modules/Payment.js';
+import Formatter from './Modules/Formatter.js';
 
 interface Person {
     name: string;
@@ -35,7 +37,14 @@ console.log(type, tofrom, details, amount);
 
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
-    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+
+    let doc: Formatter;
+    if(type.value === 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    } else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc.format());
 });
 
 const inv = new Invoice('Samuel', 'laundry', 20);

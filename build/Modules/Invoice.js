@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 export default class Invoice {
     constructor(client, details, amount) {
         this.client = client;
