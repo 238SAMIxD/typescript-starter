@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+// https://www.mindluster.com/certificate/242
+
 const character = 'SAMI';
 console.log(character);
 
@@ -78,3 +80,21 @@ const greet2: Function = (user: user) => {
     console.log(user);
 };
 greet2({name: 'Simon', age: 15});
+
+let plus: (a: number, b: number) => number;
+plus = (a, b) => a + b;
+plus = (b, a) => b + a;
+console.log(plus(1, 2));
+let logDetails: (obj: object) => void;
+logDetails = (obj) => console.log(obj);
+logDetails = (obj) => {
+    for(const e in obj) {
+        // console.log(obj[e]);
+        if(typeof(e) !== 'object') {
+            // console.log(obj[e]); ???
+            continue;
+        }
+        logDetails(obj[e]);
+    }
+}
+logDetails({user: 'xd', x: 2, d: true, p: '[e['});
