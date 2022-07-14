@@ -58,3 +58,13 @@ console.log(cool);
 let age: unknown = 20; // uknown instead of any
 age = 'k';
 console.log(age);
+
+let f: Function = () => console.log('F');
+f = function() {console.log('FFF')};
+console.log(f);
+f();
+
+const minus: Function = (a: number, b: number): number => {
+    return a - b;
+}
+console.log(minus(10, 2));
