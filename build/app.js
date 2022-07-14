@@ -1,5 +1,16 @@
 /* eslint-disable prettier/prettier */
 import Invoice from './Modules/Invoice.js';
+const me = {
+    name: 'Samuel',
+    age: 21,
+    speak(text) {
+        console.log(text);
+    },
+    spends(amount) {
+        return amount;
+    }
+};
+console.log(me);
 const anchor = document.querySelector('a');
 console.log(anchor === null || anchor === void 0 ? void 0 : anchor.href);
 const form = document.querySelector('form.new-item-form');

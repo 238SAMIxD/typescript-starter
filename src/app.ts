@@ -1,6 +1,26 @@
 /* eslint-disable prettier/prettier */
 import Invoice from './Modules/Invoice.js';
 
+interface Person {
+    name: string;
+    age: number;
+
+    speak(what: string): void;
+    spends(howMuch: number): number;
+}
+
+const me: Person = {
+    name: 'Samuel',
+    age: 21,
+    speak(text: string) {
+        console.log(text);
+    },
+    spends(amount: number) {
+        return amount;
+    }
+}
+console.log(me);
+
 const anchor = document.querySelector('a');
 console.log(anchor?.href);
 
