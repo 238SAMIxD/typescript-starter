@@ -1,3 +1,3 @@
-export default interface Fortmatter {
+export default interface Formatter {
     format(): string;
 }
