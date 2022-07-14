@@ -68,3 +68,13 @@ const minus: Function = (a: number, b: number): number => {
     return a - b;
 }
 console.log(minus(10, 2));
+
+const greet: Function = (user: {name: string, age: number}) => {
+    console.log(`Hey ${user.name}! You are ${user.age} years old`);
+}
+greet({name: 'Samuel', age: 21});
+type user = {name: string, age: number};
+const greet2: Function = (user: user) => {
+    console.log(user);
+};
+greet2({name: 'Simon', age: 15});
