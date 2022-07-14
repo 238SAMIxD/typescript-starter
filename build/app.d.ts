@@ -4,6 +4,9 @@ declare class Invoice {
     private amount;
     constructor(client: string, details: string, amount: number);
     format(): string;
+    getClient(): string;
+    getDetails(): string;
+    getAmount(): number;
 }
 declare const anchor: HTMLAnchorElement | null;
 declare const form: HTMLFormElement;

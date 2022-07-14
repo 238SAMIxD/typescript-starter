@@ -9,6 +9,15 @@ class Invoice {
     format() {
         return `${this.client} owes $${this.amount} for ${this.details}`;
     }
+    getClient() {
+        return this.client;
+    }
+    getDetails() {
+        return this.details;
+    }
+    getAmount() {
+        return this.amount;
+    }
 }
 const anchor = document.querySelector('a');
 console.log(anchor === null || anchor === void 0 ? void 0 : anchor.href);

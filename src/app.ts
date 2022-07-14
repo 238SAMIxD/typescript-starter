@@ -5,6 +5,18 @@ class Invoice {
     format() {
         return `${this.client} owes $${this.amount} for ${this.details}`;
     }
+
+    getClient() {
+        return this.client;
+    }
+
+    getDetails() {
+        return this.details;
+    }
+
+    getAmount() {
+        return this.amount;
+    }
 }
 
 const anchor = document.querySelector('a');
