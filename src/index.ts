@@ -54,3 +54,7 @@ const cool: {
     three: true
 };
 console.log(cool);
+
+let age: unknown = 20; // uknown instead of any
+age = 'k';
+console.log(age);
