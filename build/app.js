@@ -41,4 +41,9 @@ var Games;
 })(Games || (Games = {}));
 console.log(Games);
 console.log(Games.TFT);
+let a = ['Dog', 12, false];
+a[0] = false;
+a = ['abc', true, 0];
+const tuple = ['Sure', 42, false];
+console.log(tuple);
 //# sourceMappingURL=app.js.map

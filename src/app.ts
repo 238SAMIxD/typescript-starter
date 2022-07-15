@@ -49,3 +49,10 @@ enum Games {
 }
 console.log(Games);
 console.log(Games.TFT);
+
+let a = ['Dog', 12, false];
+a[0] = false;
+a = ['abc', true, 0];
+
+const tuple: [string, number, boolean] = ['Sure', 42, false];
+console.log(tuple);
