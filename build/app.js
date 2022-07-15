@@ -20,4 +20,15 @@ form.addEventListener('submit', (e) => {
     }
     list.render(doc, type.value, 'start');
 });
+const addUID = (obj) => {
+    const uid = Math.floor(Math.random() * 10);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+console.log(addUID({ name: 'Han', age: 20, isMale: true }));
+const res = {
+    uid: 0,
+    name: 'OMG',
+    data: 'nope'
+};
+console.log(res);
 //# sourceMappingURL=app.js.map

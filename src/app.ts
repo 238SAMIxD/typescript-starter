@@ -24,3 +24,22 @@ form.addEventListener('submit', (e: Event) => {
 
     list.render(doc, type.value, 'start');
 });
+
+
+const addUID = <T extends {name: string, age: number}>(obj: T) => {
+    const uid = Math.floor(Math.random() * 10);
+    return {...obj, uid};
+};
+console.log(addUID({name: 'Han', age: 20, isMale: true}));
+
+interface Resource<T> {
+    uid: number,
+    name: string,
+    data: T
+}
+const res: Resource<string> = {
+    uid: 0,
+    name: 'OMG',
+    data: 'nope'
+};
+console.log(res);
