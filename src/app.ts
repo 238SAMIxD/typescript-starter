@@ -24,35 +24,3 @@ form.addEventListener('submit', (e: Event) => {
 
     list.render(doc, type.value, 'start');
 });
-
-
-const addUID = <T extends {name: string, age: number}>(obj: T) => {
-    const uid = Math.floor(Math.random() * 10);
-    return {...obj, uid};
-};
-console.log(addUID({name: 'Han', age: 20, isMale: true}));
-
-interface Resource<T> {
-    uid: number,
-    name: string,
-    data: T
-}
-const res: Resource<string> = {
-    uid: 0,
-    name: 'OMG',
-    data: 'nope'
-};
-console.log(res);
-
-enum Games {
-    LOL, CSGO, WOW, LOR, TFT
-}
-console.log(Games);
-console.log(Games.TFT);
-
-let a = ['Dog', 12, false];
-a[0] = false;
-a = ['abc', true, 0];
-
-const tuple: [string, number, boolean] = ['Sure', 42, false];
-console.log(tuple);
