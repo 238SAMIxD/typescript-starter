@@ -1,61 +1,80 @@
-body{
-    margin: 0;
-    font-family: Roboto; 
-  }
-.wrapper{
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto; 
+}
+
+.wrapper {
   max-width: 960px;
   margin: 0 auto;
 }
-h1{
+
+h1 {
   margin: 40px auto;
   color: #ff0aa7;
   text-align: center;
 }
-ul{
+
+ul {
   padding: 0;
   list-style-type: none;
 }
-li{
+
+li {
   padding: 6px 10px;
   border: 1px solid #eee;
   margin: 10px auto;
 }
-li h4{
+
+li h4 {
   color: #ff0aa7;
   margin: 0;
   text-transform: capitalize;
 }
-li p{
+
+li p {
   color: #333;
   margin: 8px 0 0;
 }
-footer{
+
+footer {
   background: #eee;
   padding: 60px;
   margin-top: 60px;
 }
-form{
+
+form {
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
 }
-label{
+
+label {
   display: block;
   font-weight: bold;
   font-size: 0.8em;
   color: #333;
   margin: 16px 0 6px;
 }
-input, select{
+
+input,
+select {
   padding: 6px;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
 }
-.field{
+
+.field {
   display: inline-block;
   margin: 0 10px;
 }
-button{
+
+button {
   color: white;
   border: 0;
   background: #ff0aa7;
@@ -64,7 +83,8 @@ button{
   border-radius: 4px;
   cursor: pointer;
 }
-footer a{
+
+footer a {
   text-align: center;
   display: block;
   color: #999;
