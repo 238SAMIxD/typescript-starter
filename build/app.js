@@ -31,4 +31,14 @@ const res = {
     data: 'nope'
 };
 console.log(res);
+var Games;
+(function (Games) {
+    Games[Games["LOL"] = 0] = "LOL";
+    Games[Games["CSGO"] = 1] = "CSGO";
+    Games[Games["WOW"] = 2] = "WOW";
+    Games[Games["LOR"] = 3] = "LOR";
+    Games[Games["TFT"] = 4] = "TFT";
+})(Games || (Games = {}));
+console.log(Games);
+console.log(Games.TFT);
 //# sourceMappingURL=app.js.map

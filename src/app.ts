@@ -43,3 +43,9 @@ const res: Resource<string> = {
     data: 'nope'
 };
 console.log(res);
+
+enum Games {
+    LOL, CSGO, WOW, LOR, TFT
+}
+console.log(Games);
+console.log(Games.TFT);
